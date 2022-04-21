@@ -288,28 +288,21 @@ export function MobileNav({ navOpen, isNavOpen }) {
               letterSpacing={1}
               border="1px solid red"
             >
-              {/* <NavLink
-                exact={navItem.exact}
+              <NavLink
+                // exact={navItem.exact}
                 to={navItem.path}
-                activeStyle={{ borderBottom: "1px solid #fff" }}
-                style={{
-                  display: "inline-block",
-                  padding: "8px 0",
-                  color: "#fff",
-                  marginRight: "40px",
-                }}
-              > */}
-              <strong
-                marginRight={majorScale(1)}
-                fontWeight="bold"
-                display="inline-block"
-                color="red"
               >
-                {navItem.id}
-              </strong>
+                <strong
+                  marginRight={majorScale(1)}
+                  fontWeight="bold"
+                  display="inline-block"
+                  color="red"
+                >
+                  {navItem.id}
+                </strong>
 
-              <Pane>{navItem.title}</Pane>
-              {/* </NavLink> */}
+                <Pane>{navItem.title}</Pane>
+              </NavLink>
             </ListItem>
           ))}
         </UnorderedList>
