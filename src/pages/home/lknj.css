@@ -1,0 +1,30 @@
+.container {
+  height: 200px;
+  width: 200px;
+  position: relative;
+}
+.myDIV {
+  background-color: red;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+}
+
+.hide {
+  display: none;
+  background-color: blue;
+  height: 100%;
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}
+
+/* <div class='container' >
+  <div class="myDIV">Hover over me.</div>
+  <div class="hide">I don show</div>
+  </div> */

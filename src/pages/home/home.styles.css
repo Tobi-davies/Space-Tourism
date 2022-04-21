@@ -1,0 +1,19 @@
+.explore {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 160px;
+  height: 160px;
+}
+
+.overlay {
+  background-color: red;
+  display: none;
+  height: 100%;
+}
+
+.explore:hover + .overlay {
+  display: block;
+  color: red;
+}

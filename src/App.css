@@ -1,4 +1,4 @@
 .App {
   font-family: "Barlow Condensed", sans-serif;
-  height: 100%;
+  min-height: 100vh;
 }
