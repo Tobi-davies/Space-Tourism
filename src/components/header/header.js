@@ -15,6 +15,12 @@ import hamburger from "../../assets/icons/icon-hamburger.svg";
 import closeIcon from "../../assets/icons/icon-close.svg";
 import { VIEWPORT_BREAKPOINTS } from "../../enums";
 
+const HorizontalLine = styled(Pane)`
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
+`;
+
 const NavContainer = styled(Pane)`
   width: 57%;
   // min-width: 400px;
@@ -153,14 +159,14 @@ function Header() {
             // border="1px solid green"
             position="relative"
           >
-            <Pane
+            <HorizontalLine
               height="1px"
-              width="50%"
+              width="40%"
               backgroundColor="#979797"
               position="absolute"
-              left="-48%"
+              left="-36%"
               top="50%"
-            ></Pane>
+            ></HorizontalLine>
             <UnorderedList
               display="flex"
               alignItems="center"

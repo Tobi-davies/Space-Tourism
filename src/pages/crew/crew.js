@@ -18,6 +18,9 @@ const Bullet = styled(Pane)`
 `;
 
 const Crew = () => {
+  const isLargeScreen = useMediaQuery({
+    query: `(min-width: ${VIEWPORT_BREAKPOINTS.lg}px)`,
+  });
   const isLaptop = useMediaQuery({
     query: `(min-width: ${VIEWPORT_BREAKPOINTS.md}px)`,
   });
@@ -28,78 +31,23 @@ const Crew = () => {
 
   const [currentSlide, setCurrentSlide] = React.useState(0);
 
-  // const [crewData, setCrewData] = React.useState(spaceData.crew[currentSlide]);
-
-  // const slideShow = () => {
-  //   if (currentSlide >= spaceData.crew.length) {
-  //     setCurrentSlide(0);
-  //   }
-  //   setCurrentSlide((prev) => prev + 1);
-  // };
-
-  // React.useEffect(() => {
-  //   const slideShow = () => {
-  //     if (currentSlide >= spaceData.crew.length - 1) {
-  //       setCurrentSlide(0);
-  //     }
-  //     setCurrentSlide((prev) => prev + 1);
-  //   };
-
-  //   const interval = setInterval(slideShow, 3000);
-
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, [currentSlide]);
-
-  // React.useEffect(() => {
-  //   setCrewData(currentSlide);
-  // }, [currentSlide]);
-
-  // setInterval(slideShow, 10000);
-
-  // function slideShow() {
-  //   if (currentSlide === spaceData.crew.length) {
-  //     setCurrentSlide(0);
-  //   } else {
-  //     setCurrentSlide((prev) => prev + 1);
-  //   }
-  // }
-
-  console.log(currentSlide);
-
-  const autoPlayRef = React.useRef();
-
   React.useEffect(() => {
-    autoPlayRef.current = nextSlide;
-  });
+    const interval = setInterval(autoPlay, 5000);
 
-  // React.useEffect(() => {
-  //   const slideShow = () => {
-  //     autoPlayRef.current();
-  //   };
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
-  //   const interval = setInterval(slideShow, 10000);
-
-  //   return () => {
-  //     clearInterval(interval);
-  //   };
-  // }, [currentSlide]);
-
-  const nextSlide = () => {
-    setCurrentSlide(
-      currentSlide === spaceData.crew.length - 1 ? 0 : currentSlide + 1
-    );
+  const autoPlay = () => {
+    setCurrentSlide((prev) => {
+      if (prev < spaceData.crew.length - 1) {
+        return prev + 1;
+      } else {
+        return 0;
+      }
+    });
   };
-
-  const [crewData, setCrewData] = React.useState(spaceData.crew[currentSlide]);
-
-  React.useState(() => {
-    setCrewData(spaceData.crew[currentSlide]);
-  }, [currentSlide]);
-
-  console.log(spaceData.crew[currentSlide].role);
-  console.log(crewData.role);
 
   return (
     <Pane
@@ -121,7 +69,8 @@ const Crew = () => {
       <Pane
         // className="row"
 
-        maxWidth={1100}
+        // maxWidth={1100}
+        // paddingX={majorScale(8)}
         margin="auto"
         width="100%"
         // border="1px solid red"
@@ -135,6 +84,16 @@ const Crew = () => {
           paddingLeft={isLaptop ? majorScale(1) : isTablet ? majorScale(4) : 0}
           marginBottom={isLaptop ? 0 : 20}
           textAlign={isTablet ? "unset" : "center"}
+          maxWidth={1230}
+          paddingX={
+            isLargeScreen
+              ? majorScale(9)
+              : isLaptop
+              ? majorScale(6)
+              : majorScale(4)
+          }
+          marginX="auto"
+          // border="1px solid blue"
         >
           <Text
             color="rgba(255,255,255, 0.5)"
@@ -156,6 +115,11 @@ const Crew = () => {
           }
           justifyContent="space-between"
           // marginTop={majorScale(4)}
+          maxWidth={1230}
+          marginX="auto"
+          paddingX={
+            isLargeScreen ? majorScale(8) : isLaptop ? majorScale(4) : "unset"
+          }
           // border="1px solid green"
           minHeight="75vh"
         >
@@ -186,6 +150,7 @@ const Crew = () => {
                 lineHeight={1.5}
               >
                 {spaceData.crew[currentSlide].role}
+                {/* {crewData.role} */}
               </Text>
               <br />
               <Paragraph
@@ -197,6 +162,7 @@ const Crew = () => {
                 lineHeight={1}
               >
                 {spaceData.crew[currentSlide].name}
+                {/* {crewData.name} */}
               </Paragraph>
 
               <Paragraph
@@ -209,6 +175,7 @@ const Crew = () => {
                 // border="1px solid red"
               >
                 {spaceData.crew[currentSlide].bio}
+                {/* {crewData.bio} */}
               </Paragraph>
             </Pane>
 
@@ -226,7 +193,7 @@ const Crew = () => {
                   <Bullet
                     key={i}
                     onClick={() => {
-                      setCrewData(spaceData.crew[i]);
+                      // setCrewData(spaceData.crew[i]);
                       setCurrentSlide(i);
                     }}
                     height={10}
