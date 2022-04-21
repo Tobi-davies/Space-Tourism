@@ -1,18 +1,8 @@
 import React from "react";
-import styled from "@emotion/styled";
+// import styled from "@emotion/styled";
 import { useMediaQuery } from "react-responsive";
-import {
-  Pane,
-  Paragraph,
-  majorScale,
-  UnorderedList,
-  ListItem,
-  Text,
-  minorScale,
-} from "evergreen-ui";
+import { Pane, Paragraph, majorScale, Text, minorScale } from "evergreen-ui";
 import Header from "../../components/header/header";
-import techImage from "../../assets/image/technology/image-launch-vehicle-portrait.jpg";
-import techImageLandscape from "../../assets/image/technology/image-launch-vehicle-landscape.jpg";
 import techPageBackground from "../../assets/image/technology/background-technology-desktop.jpg";
 import mobileBackground from "../../assets/image/technology/background-technology-mobile.jpg";
 import tabletBackground from "../../assets/image/technology/background-technology-tablet.jpg";

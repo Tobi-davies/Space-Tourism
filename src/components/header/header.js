@@ -99,7 +99,7 @@ const navLinkStyles = ({ isActive }) => {
     // fontWeight: isActive ? "bold" : "normal",
     // textDecoration: isActive ? "underline" : "none",
     // paddingY: "16px",
-    fontSize: 15,
+    // fontSize: 15,
     // columnGap: 8,
     borderBottom: isActive ? "2px solid white" : "2px solid transparent",
     fontSize: "inherit",

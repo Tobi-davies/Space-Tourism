@@ -11,7 +11,6 @@ import {
   minorScale,
 } from "evergreen-ui";
 import destinationBackgroundImage from "../../assets/image/destination/background-destination-desktop.jpg";
-import backgroundImage from "../../assets/image/destination/image-moon.webp";
 import Header from "../../components/header/header";
 import { spaceData } from "../../data/data";
 import { VIEWPORT_BREAKPOINTS } from "../../enums";

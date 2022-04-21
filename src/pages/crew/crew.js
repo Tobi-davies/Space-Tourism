@@ -1,20 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { useMediaQuery } from "react-responsive";
-import {
-  Pane,
-  Paragraph,
-  majorScale,
-  UnorderedList,
-  ListItem,
-  Text,
-  minorScale,
-} from "evergreen-ui";
+import { Pane, Paragraph, majorScale, Text, minorScale } from "evergreen-ui";
 import Header from "../../components/header/header";
 import crewBackgroundImage from "../../assets/image/crew/background-crew-desktop.jpg";
 import mobileBackgroundImage from "../../assets/image/crew/background-crew-mobile.jpg";
 import tabletBackgroundImage from "../../assets/image/crew/background-crew-tablet.jpg";
-import crewImage from "../../assets/image/crew/image-victor-glover.webp";
 import { spaceData } from "../../data/data";
 import { VIEWPORT_BREAKPOINTS } from "../../enums";
 

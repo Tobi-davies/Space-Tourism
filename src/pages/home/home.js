@@ -1,14 +1,7 @@
 import styled from "@emotion/styled";
 import "./home.styles.css";
 import { useMediaQuery } from "react-responsive";
-import {
-  Pane,
-  Button,
-  Dialog,
-  Paragraph,
-  toaster,
-  majorScale,
-} from "evergreen-ui";
+import { Pane, Paragraph, majorScale } from "evergreen-ui";
 
 // import homeBackgroundImage from '../../assets/'
 import homeBackgroundImage from "../../assets/image/home/background-home-desktop.jpg";
