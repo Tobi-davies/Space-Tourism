@@ -50,7 +50,7 @@ const MobileNavContainer = styled.nav`
   display: block;
   padding-top: 30px;
   // transform: translateX(0);
-  width: 300px;
+  width: 350px;
   position: fixed;
   height: 100vh;
   bottom: 0;
@@ -122,127 +122,121 @@ function Header() {
     query: `(min-width: ${VIEWPORT_BREAKPOINTS.md}px)`,
   });
   return (
-    <Pane
-      // maxWidth={1200}
-      width={isTablet ? "95%" : "100%"}
-      display="flex"
-      alignItems="center"
-      justifyContent="space-between"
-      // border="1px solid red"
-      // marginTop={majorScale(2)}
-      // paddingLeft={majorScale(5)}
-      // margin={isTablet ? "unset" : "auto"}
-      marginLeft={isTablet ? "auto" : "unset"}
-      // paddingx={isTablet ? "unset" : 20}
-      // paddingx={20}
-      // marginRight={isTablet ? "unset" : "auto"}
-    >
-      <Pane>
-        {" "}
-        <img
-          src={spaceTourismLogo}
-          // src="../../assets/icons/logo.svg"
-          alt="space tourism logo"
-          // style={{ verticalAlign: "middle" }}
-        />
-      </Pane>
-
-      {isTablet ? (
-        <NavContainer
-          is="nav"
-          // marginLeft={majorScale(5)}
-          // display="flex"
-          // alignItems="center"
-          // fontSize="1em"
-          // paddingLeft={majorScale(7)}
-          // paddingRight={majorScale(10)}
-          // backgroundColor="rgba(255,255,255, 0.2)"
-          // border="1px solid green"
-          position="relative"
-        >
-          <Pane
-            height="1px"
-            width="50%"
-            backgroundColor="#979797"
-            position="absolute"
-            left="-48%"
-            top="50%"
-          ></Pane>
-          <UnorderedList
-            display="flex"
-            alignItems="center"
-            // columnGap={majorScale(6)}
-            columnGap={isLaptop ? majorScale(6) : majorScale(3)}
-            // display={isTablet ? "unset" : "none"}
-            border="1px solid blue"
-          >
-            {PRIMARY_NAV_ITEMS.map((navItem, i) => (
-              // <ListItem
-              //   key={i}
-              //   fontSize="inherit"
-              //   color="var(--primary-light-color)"
-              //   // marginX={majorScale(3)}
-              //   display="flex"
-              //   columnGap={majorScale(1)}
-              //   // paddingY={majorScale(2)}
-              //   cursor="pointer"
-              //   letterSpacing={1}
-              //   fontSize={isLaptop ? 16 : 15}
-              // >
-              <NavLink
-                key={i}
-                // exact={navItem.exact}
-                to={navItem.path}
-                // activeStyle={{ borderBottom: "1px solid #fff" }}
-                // style={{
-                //   display: "flex",
-                //   paddingY: "16px",
-                //   fontSize: 15,
-                //   columnGap: 8,
-                //   borderBottom: "2px solid red",
-
-                // }}
-                style={navLinkStyles}
-              >
-                <Pane
-                  paddingY={16}
-                  display="flex"
-                  //   display="flex"
-                  columnGap={majorScale(1)}
-                >
-                  {isLaptop && (
-                    <strong
-                    // marginRight={majorScale(1)}
-                    // fontWeight="bold"
-                    // display="inline-block"
-                    // color="red"
-                    >
-                      {navItem.id}
-                    </strong>
-                  )}
-
-                  <Pane
-                  // paddingY={majorScale(2)}
-                  >
-                    {navItem.title}
-                  </Pane>
-                </Pane>
-              </NavLink>
-              // </ListItem>
-            ))}
-          </UnorderedList>
-        </NavContainer>
-      ) : (
-        <Pane cursor="pointer" onClick={() => isNavOpen(true)}>
+    <Pane display="flex" justifyContent={isTablet ? "flex-end" : "center"}>
+      <Pane
+        width={isTablet ? "95%" : "90%"}
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        border="1px solid red"
+      >
+        <Pane>
+          {" "}
           <img
-            src={hamburger}
+            src={spaceTourismLogo}
             // src="../../assets/icons/logo.svg"
-            alt="hamburger"
+            alt="space tourism logo"
             // style={{ verticalAlign: "middle" }}
           />
         </Pane>
-      )}
-      {navOpen && <MobileNav navOpen={navOpen} isNavOpen={isNavOpen} />}
+
+        {isTablet ? (
+          <NavContainer
+            is="nav"
+            // marginLeft={majorScale(5)}
+            // display="flex"
+            // alignItems="center"
+            // fontSize="1em"
+            // paddingLeft={majorScale(7)}
+            // paddingRight={majorScale(10)}
+            // backgroundColor="rgba(255,255,255, 0.2)"
+            // border="1px solid green"
+            position="relative"
+          >
+            <Pane
+              height="1px"
+              width="50%"
+              backgroundColor="#979797"
+              position="absolute"
+              left="-48%"
+              top="50%"
+            ></Pane>
+            <UnorderedList
+              display="flex"
+              alignItems="center"
+              // columnGap={majorScale(6)}
+              columnGap={isLaptop ? majorScale(6) : majorScale(3)}
+              // display={isTablet ? "unset" : "none"}
+              border="1px solid blue"
+            >
+              {PRIMARY_NAV_ITEMS.map((navItem, i) => (
+                // <ListItem
+                //   key={i}
+                //   fontSize="inherit"
+                //   color="var(--primary-light-color)"
+                //   // marginX={majorScale(3)}
+                //   display="flex"
+                //   columnGap={majorScale(1)}
+                //   // paddingY={majorScale(2)}
+                //   cursor="pointer"
+                //   letterSpacing={1}
+                //   fontSize={isLaptop ? 16 : 15}
+                // >
+                <NavLink
+                  key={i}
+                  // exact={navItem.exact}
+                  to={navItem.path}
+                  // activeStyle={{ borderBottom: "1px solid #fff" }}
+                  // style={{
+                  //   display: "flex",
+                  //   paddingY: "16px",
+                  //   fontSize: 15,
+                  //   columnGap: 8,
+                  //   borderBottom: "2px solid red",
+
+                  // }}
+                  style={navLinkStyles}
+                >
+                  <Pane
+                    paddingY={16}
+                    display="flex"
+                    //   display="flex"
+                    columnGap={majorScale(1)}
+                  >
+                    {isLaptop && (
+                      <strong
+                      // marginRight={majorScale(1)}
+                      // fontWeight="bold"
+                      // display="inline-block"
+                      // color="red"
+                      >
+                        {navItem.id}
+                      </strong>
+                    )}
+
+                    <Pane
+                    // paddingY={majorScale(2)}
+                    >
+                      {navItem.title}
+                    </Pane>
+                  </Pane>
+                </NavLink>
+                // </ListItem>
+              ))}
+            </UnorderedList>
+          </NavContainer>
+        ) : (
+          <Pane cursor="pointer" onClick={() => isNavOpen(true)}>
+            <img
+              src={hamburger}
+              // src="../../assets/icons/logo.svg"
+              alt="hamburger"
+              // style={{ verticalAlign: "middle" }}
+            />
+          </Pane>
+        )}
+        {navOpen && <MobileNav navOpen={navOpen} isNavOpen={isNavOpen} />}
+      </Pane>
     </Pane>
   );
 }
@@ -291,6 +285,10 @@ export function MobileNav({ navOpen, isNavOpen }) {
               <NavLink
                 // exact={navItem.exact}
                 to={navItem.path}
+                style={{
+                  display: "flex",
+                  gap: "20px",
+                }}
               >
                 <strong
                   marginRight={majorScale(1)}
