@@ -18,18 +18,18 @@ import { VIEWPORT_BREAKPOINTS } from "../../enums";
 console.log(spaceData);
 console.log(spaceData.destinations);
 
-const NavLink = styled(Pane)`
-  // border-bottom: 2px solid transparent;
+// const NavLink = styled(Pane)`
+// border-bottom: 2px solid transparent;
 
-  // &:hover {
-  //   border-bottom: 2px solid #979797;
-  //   box-sizing: border-box;
-  // }
+// &:hover {
+//   border-bottom: 2px solid #979797;
+//   box-sizing: border-box;
+// }
 
-  // &:active {
-  //   border-bottom: 2px solid var(--primary-light-color);
-  // }
-`;
+// &:active {
+//   border-bottom: 2px solid var(--primary-light-color);
+// }
+// `;
 
 const ListLink = styled(ListItem)`
   &:hover {

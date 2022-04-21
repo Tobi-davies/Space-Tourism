@@ -4,7 +4,7 @@ import Crew from "./pages/crew/crew";
 import Destination from "./pages/destination/destination";
 import Home from "./pages/home/home";
 import Technology from "./pages/technology/technology";
-import { MobileNav } from "./components/header/header";
+// import { MobileNav } from "./components/header/header";
 
 function App() {
   return (
