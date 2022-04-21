@@ -84,12 +84,9 @@ const Destination = () => {
       <Header />
 
       <Pane
-        // className="row"
-
         maxWidth={1100}
         margin="auto"
         width="100%"
-        // border="1px solid red"
         marginTop={majorScale(5)}
       >
         <Pane
@@ -98,7 +95,7 @@ const Destination = () => {
           color="var(--primary-default-color)"
           letterSpacing={2}
           paddingLeft={isTablet ? majorScale(5) : 0}
-          border="1px solid red"
+          // border="1px solid red"
           textAlign={isTablet ? "unset" : "center"}
         >
           <Text
@@ -116,52 +113,30 @@ const Destination = () => {
         <Pane
           display="flex"
           flexDirection={isLaptop ? "row" : "column"}
-          // alignItems="center"
           marginTop={majorScale(4)}
-          // marginBottom={majorScale(4)}
           paddingBottom={isLaptop ? "unset" : 50}
         >
           <Pane
             className="col-md-6 col-12"
-            border="1px solid white"
-            // width={isLaptop ? "unset" : "100%"}
+            // border="1px solid white"
           >
-            {/* <Text
-              color="rgba(255,255,255, 0.5)"
-              fontSize={20}
-              marginRight={minorScale(2)}
-              fontFamily="Barlow Condensed"
-              letterSpacing={1}
-            >
-              01
-            </Text> */}
-            <Pane
-              // border="1px solid red"
-              textAlign="center"
-              paddingTop={majorScale(3)}
-            >
+            <Pane textAlign="center" paddingTop={majorScale(3)}>
               <img
-                // src={pageData.images.webp}
-                // src={`url(${pageData.images.png})`}
-                // src="https://res.cloudinary.com/dgrebgb5n/image/upload/v1650038456/space-tourism/destination/image-moon_ofyxez.png"
                 src={pageData.images.png}
-                // src={backgroundImage}
-                // src="../../assets/image/destination/image-moon.webp"
                 alt="destination"
-                // style={{ verticalAlign: "middle" }}
                 width={isLaptop ? "70%" : "50%"}
               />
             </Pane>
           </Pane>
           <Pane
             className="col-md-6 col-12"
-            border="1px solid blue"
+            // border="1px solid blue"
             textAlign={isLaptop ? "unset" : "center"}
           >
             <Pane
               paddingX={isTablet ? majorScale(7) : 0}
               paddingTop={majorScale(2)}
-              border="1px solid green"
+              // border="1px solid green"
             >
               <UnorderedList
                 display="flex"
@@ -169,7 +144,7 @@ const Destination = () => {
                 justifyContent={isLaptop ? "unset" : "center"}
                 columnGap={isTablet ? majorScale(5) : majorScale(3)}
                 marginBottom={majorScale(2)}
-                border="1px solid red"
+                // border="1px solid red"
               >
                 {DESTINATION_NAV_ITEMS.map((navItem, i) => (
                   <ListLink
@@ -219,7 +194,7 @@ const Destination = () => {
                 flexDirection={isTablet ? "row" : "column"}
                 alignItems={isTablet ? "unset" : "center"}
                 rowGap={20}
-                border="1px solid red"
+                // border="1px solid red"
                 marginTop={majorScale(2)}
               >
                 <Pane width="50%" display="flex" flexDirection="column">
