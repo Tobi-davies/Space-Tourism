@@ -163,7 +163,7 @@ function Home() {
               // backgroundColor="rgb(255,255,255)"
               // backgroundColor="#fff"
               // opacity={0.3}
-              display="flex"
+              display={isTablet ? "flex" : "none"}
               alignItems="center"
               justifyContent="center"
               // visibility="hidden"
