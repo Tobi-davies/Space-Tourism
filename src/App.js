@@ -8,7 +8,6 @@ import Technology from "./pages/technology/technology";
 
 function App() {
   return (
-    // <div className="App">
     <>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -16,14 +15,7 @@ function App() {
         <Route path="/crew" element={<Crew />} />
         <Route path="/technology" element={<Technology />} />
       </Routes>
-
-      {/* <Home /> */}
-      {/* <Destination /> */}
-      {/* <Crew /> */}
-      {/* <MobileNav /> */}
-      {/* <Technology /> */}
     </>
-    // </div>
   );
 }
 
